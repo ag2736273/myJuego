@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Victoria! - Corazón del Dragón</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .victory-container {
+            text-align: center;
+            animation: fadeInScale 1.5s ease-out;
+        }
+
+        .victory-title {
+            font-size: 3.5rem;
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            margin-bottom: 2rem;
+            animation: glowPulse 2s infinite;
+        }
+
+        .victory-text {
+            font-size: 1.5rem;
+            color: #ffdca3;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .dragon-symbol {
+            font-size: 4rem;
+            color: #ff6b6b;
+            margin: 2rem 0;
+            animation: floatDragon 3s ease-in-out infinite;
+        }
+
+        .restart-btn {
+            background: linear-gradient(180deg, #ffd700, #b8860b);
+            color: #000;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.2rem;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            margin-top: 2rem;
+        }
+
+        .restart-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes glowPulse {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 215, 0, 0.8),
+                             0 0 30px rgba(255, 215, 0, 0.4);
+            }
+        }
+
+        @keyframes floatDragon {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-medieval">
+    <main class="min-h-screen flex items-center justify-center p-6">
+        <div class="medieval-container victory-container">
+            <h1 class="victory-title">¡Victoria Legendaria!</h1>
+            
+            <div class="dragon-symbol">🐉</div>
+            
+            <div class="victory-text">
+                <p>¡Has demostrado ser digno del Corazón del Dragón!</p>
+                <p>Tu sabiduría y valentía han resuelto todos los enigmas.</p>
+                <p>El reino recordará tu nombre por siempre.</p>
+            </div>
+
+            <div class="medieval-divider"></div>
+
+            <p class="victory-text">
+                "En las leyendas vivirá tu hazaña,<br>
+                pues el Corazón del Dragón has conquistado<br>
+                con ingenio y determinación."
+            </p>
+
+            <button id="btn-restart" class="restart-btn">
+                Volver a Empezar
+            </button>
+        </div>
+    </main>
+    <script type="module" src="../src/final.js"></script>
+</body>
+</html>

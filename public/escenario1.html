@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escenario 1 - Corazón del Dragón</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <main class="min-h-screen flex items-center justify-center p-6">
+        <div class="w-full max-w-3xl p-8 frame backdrop-blur-sm">
+            <div class="text-center mb-6">
+                <h1 class="medieval-title mb-4">La Entrada de la Fortaleza</h1>
+                <p class="text-yellow-200/80 text-lg">Nivel 1 - Los Guardianes de Piedra</p>
+            </div>
+
+            <div class="ornament my-6 mx-auto w-48"></div>
+
+            <div class="space-y-8 text-lg font-cormorant leading-relaxed text-yellow-100/90">
+                <p>Te encuentras ante la entrada de la fortaleza de Malakar. Dos antiguos guardianes de piedra custodian el paso, sus ojos brillan con una luz espectral. Para continuar, deberás responder sus acertijos...</p>
+
+                <div class="space-y-4 my-8">
+                    <div id="acertijo1" class="bg-black/30 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3">Primer Guardián dice:</h3>
+                        <p class="italic mb-4">"Soy más antiguo que los dragones mismos,<br>
+                        devoro todo lo que existe,<br>
+                        mato reyes, arruino ciudades,<br>
+                        y convierto las montañas en polvo.<br>
+                        ¿Qué soy?"</p>
+                        <div class="text-sm text-yellow-100/60 mb-4">
+                            <p>El guardián susurra las posibles respuestas:</p>
+                            <ul class="list-none pl-4 space-y-1">
+                                <li>1. El fuego</li>
+                                <li>2. El tiempo</li>
+                                <li>3. El viento</li>
+                            </ul>
+                        </div>
+                        <button onclick="resolverAcertijo1()" class="gold-btn">Responder</button>
+                    </div>
+
+                    <div id="acertijo2" class="bg-black/30 p-6 rounded-lg invisible opacity-0 transition-all duration-500">
+                        <h3 class="text-xl font-semibold mb-3">Segundo Guardián dice:</h3>
+                        <p class="italic mb-4">"Tengo ciudades, pero no casas.<br>
+                        Tengo montañas, pero no árboles.<br>
+                        Tengo agua, pero no peces.<br>
+                        Tengo caminos, pero no viajeros.<br>
+                        ¿Qué soy?"</p>
+                        <div class="text-sm text-yellow-100/60 mb-4">
+                            <p>El guardián susurra las posibles respuestas:</p>
+                            <ul class="list-none pl-4 space-y-1">
+                                <li>1. Un libro</li>
+                                <li>2. Un espejo</li>
+                                <li>3. Un mapa</li>
+                            </ul>
+                        </div>
+                        <button onclick="resolverAcertijo2()" class="gold-btn">Responder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/src/escenario1.js"></script>
+</body>
+</html>

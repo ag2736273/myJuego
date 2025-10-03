@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escenario 2 - Corazón del Dragón</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <main class="min-h-screen flex items-center justify-center p-6">
+        <div class="w-full max-w-3xl p-8 frame backdrop-blur-sm">
+            <div class="text-center mb-6">
+                <h1 class="medieval-title mb-4">El Jardín de la Luna</h1>
+                <p class="text-yellow-200/80 text-lg">Nivel 2 - Los Enigmas Nocturnos</p>
+            </div>
+
+            <div class="ornament my-6 mx-auto w-48"></div>
+
+            <div class="space-y-8 text-lg font-cormorant leading-relaxed text-yellow-100/90">
+                <p>Las sombras de la noche envuelven el jardín. Los antiguos guardianes esperan tus respuestas...</p>
+
+                <div class="space-y-4 my-8">
+                    <div id="acertijo1" class="bg-black/30 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3">Primera Prueba:</h3>
+                        <p class="italic mb-4">"Cambio de forma cada noche,<br>
+                        pero siempre regreso completa.<br>
+                        Guío a los viajeros en la oscuridad,<br>
+                        y controlo las mareas con mi presencia.<br>
+                        ¿Qué soy?"</p>
+                        <div class="text-sm text-yellow-100/60 mb-4">
+                            <p>Las opciones brillan tenuemente:</p>
+                            <ul class="list-none pl-4 space-y-1">
+                                <li>1. La luna</li>
+                                <li>2. El sol</li>
+                                <li>3. Las estrellas</li>
+                            </ul>
+                        </div>
+                        <button onclick="resolverAcertijo1()" class="gold-btn">Responder</button>
+                    </div>
+
+                    <div id="acertijo2" class="bg-black/30 p-6 rounded-lg" style="visibility: hidden; opacity: 0; transition: all 0.5s ease;">
+                        <h3 class="text-xl font-semibold mb-3">Segunda Prueba:</h3>
+                        <p class="italic mb-4">"Siempre presente, nunca me ves.<br>
+                        Cuanto más me buscan, menos me encuentran.<br>
+                        En la paz me fortalezco,<br>
+                        en el caos me desvanezco.<br>
+                        ¿Qué soy?"</p>
+                        <div class="text-sm text-yellow-100/60 mb-4">
+                            <p>Las opciones susurran en la noche:</p>
+                            <ul class="list-none pl-4 space-y-1">
+                                <li>1. Una sombra</li>
+                                <li>2. Un espejo</li>
+                                <li>3. El silencio</li>
+                            </ul>
+                        </div>
+                        <button onclick="resolverAcertijo2()" class="gold-btn">Responder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/src/escenario2.js"></script>
+</body>
+</html>

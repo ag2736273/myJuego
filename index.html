@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corazón del Dragón</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body class="bg-medieval">
+    <!-- Contenedor principal -->
+    <main class="min-h-screen flex items-center justify-center p-6">
+      <!-- Marco del menú -->
+      <div class="menu-container">
+        <!-- Encabezado -->
+        <header class="text-center space-y-4">
+          <h1 class="medieval-title">Corazón del Dragón</h1>
+          <p class="subtitle">Una aventura medieval donde el destino arde en fuego</p>
+        </header>
+
+        <!-- Separador decorativo -->
+        <div class="medieval-divider"></div>
+
+        <!-- Sección de navegación -->
+        <nav class="menu-buttons">
+          <button id="btn-new" class="medieval-btn medieval-btn-primary" onclick="window.location.href='/historiapresentacion.html'">
+            Nuevo Juego
+          </button>
+        </nav>
+
+        <!-- Pie de página con cita -->
+        <footer class="medieval-quote">
+          <blockquote>"En cada elección yace el destino del reino..."</blockquote>
+        </footer>
+      </div>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

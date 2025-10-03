@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia - Corazón del Dragón</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+    <main class="min-h-screen flex items-center justify-center p-6">
+        <div class="w-full max-w-3xl p-8 frame backdrop-blur-sm">
+            <div class="text-center mb-6">
+                <h1 class="medieval-title mb-8">La Leyenda del Corazón de Dragón</h1>
+            </div>
+
+            <div class="ornament my-6 mx-auto w-48"></div>
+
+            <div class="space-y-6 text-lg font-cormorant leading-relaxed text-yellow-100/90">
+                <p>En el Reino de Avarnion, la gente cuenta historias sobre una joya mística conocida como El Corazón de Dragón, una piedra que late como un corazón vivo y que contiene la esencia de los dragones ancestrales. Durante siglos, los reyes la usaron no como arma, sino como símbolo de unidad y prosperidad.</p>
+
+                <p>Pero cuando el rey murió sin dejar heredero, el reino quedó vulnerable. En ese momento, un hombre en quien todos confiaban, el consejero real Malakar, mostró su verdadera cara. Tomó el Corazón, levantó ejércitos de muertos y dragones espectrales, y proclamó que el reino debía someterse a su voluntad.</p>
+
+                <p>Ahora, en medio de la oscuridad, surge un joven caballero: Aldric. No es un héroe consagrado, sino un aprendiz que quiere demostrar su valor. Armado con la espada de su padre –una hoja bendecida por antiguos dragones–, se adentra en la fortaleza maldita de Malakar. Su objetivo: recuperar el Corazón de Dragón y devolver la paz.</p>
+
+                <p>El jugador arranca con esa misión clara, pero sin saber que el viaje guarda secretos que cambiarán todo.</p>
+
+                <p class="text-yellow-200/70 italic">Tras esta historia y haber ganado el juego, viene el final que es la otra historia. Cuando se descubran 2 acertijos se cambia de escenario; son 6 niveles, entonces sería 1 escenario cada 2 acertijos y así sucesivamente.</p>
+            </div>
+
+            <div class="ornament my-6 mx-auto w-48"></div>
+
+            <div class="text-center mt-8">
+                <button id="btn-continue" class="gold-btn">Continuar</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('btn-continue').addEventListener('click', () => {
+            window.location.href = './escenario1.html';
+        });
+    </script>
+</body>
+</html>

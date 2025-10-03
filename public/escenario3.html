@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escenario 3 - Corazón del Dragón</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <main class="min-h-screen flex items-center justify-center p-6">
+        <div class="w-full max-w-3xl p-8 frame backdrop-blur-sm">
+            <div class="text-center mb-6">
+                <h1 class="medieval-title mb-4">La Cámara de los Elementos</h1>
+                <p class="text-yellow-200/80 text-lg">Nivel 3 - Pruebas Elementales</p>
+            </div>
+
+            <div class="ornament my-6 mx-auto w-48"></div>
+
+            <div class="space-y-8 text-lg font-cormorant leading-relaxed text-yellow-100/90">
+                <p>Los elementos antiguos guardan secretos profundos. Para avanzar, deberás comprenderlos...</p>
+
+                <div class="space-y-4 my-8">
+                    <div id="acertijo1" class="bg-black/30 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3">Primera Prueba:</h3>
+                        <p class="italic mb-4">"Danzo y salto sin piernas,<br>
+                        devoro sin tener boca,<br>
+                        respiro sin tener pulmones,<br>
+                        y mi rugido es temido por todos.<br>
+                        ¿Qué soy?"</p>
+                        <div class="text-sm text-yellow-100/60 mb-4">
+                            <p>Las opciones brillan ante ti:</p>
+                            <ul class="list-none pl-4 space-y-1">
+                                <li>1. Una espada</li>
+                                <li>2. Un arco</li>
+                                <li>3. El fuego</li>
+                            </ul>
+                        </div>
+                        <button onclick="resolverAcertijo1()" class="gold-btn">Responder</button>
+                    </div>
+
+                    <div id="acertijo2" class="bg-black/30 p-6 rounded-lg" style="visibility: hidden; opacity: 0; transition: all 0.5s ease;">
+                        <h3 class="text-xl font-semibold mb-3">Segunda Prueba:</h3>
+                        <p class="italic mb-4">"Sin alas vuelo alto,<br>
+                        sin manos moldeo la tierra,<br>
+                        sin voz canto melodías,<br>
+                        y sin vida doy vida.<br>
+                        ¿Qué soy?"</p>
+                        <div class="text-sm text-yellow-100/60 mb-4">
+                            <p>Las opciones fluyen como el río:</p>
+                            <ul class="list-none pl-4 space-y-1">
+                                <li>1. El aire</li>
+                                <li>2. El agua</li>
+                                <li>3. La tierra</li>
+                            </ul>
+                        </div>
+                        <button onclick="resolverAcertijo2()" class="gold-btn">Responder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/src/escenario3.js"></script>
+</body>
+</html>
