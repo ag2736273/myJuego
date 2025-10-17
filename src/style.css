@@ -11,6 +11,34 @@
     --shadow-glow: 0 6px 20px rgba(0,0,0,0.7);
 }
 
+/* Estilos del control de audio */
+.audio-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.audio-control:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-sound {
+    color: var(--color-primary);
+    opacity: 0.8;
+}
+
+.audio-control:hover .icon-sound {
+    opacity: 1;
+}
+
 /* Estilos base */
 html, body {
     height: 100%;

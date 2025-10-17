@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="src/style.css">
   </head>
   <body class="bg-medieval">
+    <!-- Audio de fondo -->
+    <audio id="bgMusic" loop preload="auto">
+      <source src="public/audiomedieval.mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+    <!-- Botón de control de audio -->
+    <button id="audioControl" class="audio-control">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon-sound" viewBox="0 0 24 24" width="24" height="24">
+        <path class="icon-sound-on" fill="currentColor" d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z"/>
+        <path class="icon-sound-off" fill="currentColor" d="M12,4L9,7H5V17H9L12,20V4M3,12H7L12,17V7L7,12H3Z" style="display:none;"/>
+      </svg>
+    </button>
     <!-- Contenedor principal -->
     <main class="min-h-screen flex items-center justify-center p-6">
       <!-- Marco del menú -->
