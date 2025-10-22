@@ -1,66 +1,62 @@
-// Función para manejar el audio en todas las páginas
+// Función para controlar el audio del juego
 document.addEventListener('DOMContentLoaded', () => {
-    const bgMusic = document.getElementById('bgMusic');
-    const audioControl = document.getElementById('audioControl');
+    // Obtener elementos del DOM
+    const audio = document.getElementById('bgMusic');
+    const boton = document.getElementById('audioControl');
     
-    if (bgMusic && audioControl) {
-        const iconSoundOn = audioControl.querySelector('.icon-sound-on');
-        const iconSoundOff = audioControl.querySelector('.icon-sound-off');
-        
-        // Intentar recuperar el estado del audio de localStorage
-        let isMuted = localStorage.getItem('audioMuted') === 'true';
-        
-        // Configurar el estado inicial
-        if (isMuted) {
-            iconSoundOn.style.display = 'none';
-            iconSoundOff.style.display = 'block';
+    // Si no existen los elementos, no hacer nada
+    if (!audio || !boton) return;
+
+    // Configuración inicial
+    const iconoSonido = boton.querySelector('.icon-sound-on');
+    const iconoMute = boton.querySelector('.icon-sound-off');
+    audio.volume = 0.5;
+    
+    // Obtener estado guardado o iniciar sin mutear
+    let estaMuteado = localStorage.getItem('audioMuted') === 'true';
+    
+    // Función para actualizar los íconos
+    const actualizarIconos = () => {
+        iconoSonido.style.display = estaMuteado ? 'none' : 'block';
+        iconoMute.style.display = estaMuteado ? 'block' : 'none';
+    };
+
+    // Función para controlar el audio
+    const controlarAudio = () => {
+        if (estaMuteado) {
+            audio.pause();
         } else {
-            iconSoundOn.style.display = 'block';
-            iconSoundOff.style.display = 'none';
-            // Intentar reproducir el audio
-            bgMusic.play().catch(error => {
-                console.log('Error al reproducir el audio:', error);
+            audio.play().catch(error => {
+                console.log('No se pudo reproducir el audio:', error);
+                estaMuteado = true;
             });
         }
+        actualizarIconos();
+        localStorage.setItem('audioMuted', estaMuteado);
+    };
 
-        // Configurar el volumen
-        bgMusic.volume = 0.5;
-
-        // Manejar el control de audio
-        audioControl.addEventListener('click', () => {
-            isMuted = !isMuted;
-            // Guardar el estado en localStorage
-            localStorage.setItem('audioMuted', isMuted);
-
-            if (isMuted) {
-                bgMusic.pause();
-                iconSoundOn.style.display = 'none';
-                iconSoundOff.style.display = 'block';
-            } else {
-                bgMusic.play().then(() => {
-                    iconSoundOn.style.display = 'block';
-                    iconSoundOff.style.display = 'none';
-                }).catch(error => {
-                    console.log('Error al reproducir el audio:', error);
-                    isMuted = true;
-                    localStorage.setItem('audioMuted', true);
-                    iconSoundOn.style.display = 'none';
-                    iconSoundOff.style.display = 'block';
-                });
-            }
+    // Configurar estado inicial
+    actualizarIconos();
+    if (!estaMuteado) {
+        audio.play().catch(() => {
+            estaMuteado = true;
+            actualizarIconos();
         });
-
-        // Iniciar reproducción en la primera interacción si no está muteado
-        const startAudio = () => {
-            if (!isMuted) {
-                bgMusic.play().catch(error => {
-                    console.log('Error al reproducir el audio:', error);
-                });
-            }
-        };
-
-        // Eventos para la primera interacción
-        document.addEventListener('click', startAudio, { once: true });
-        document.addEventListener('keydown', startAudio, { once: true });
     }
+
+    // Eventos
+    boton.addEventListener('click', () => {
+        estaMuteado = !estaMuteado;
+        controlarAudio();
+    });
+
+    // Iniciar audio con la primera interacción
+    const iniciarAudio = () => {
+        if (!estaMuteado) {
+            audio.play().catch(console.log);
+        }
+    };
+
+    document.addEventListener('click', iniciarAudio, { once: true });
+    document.addEventListener('keydown', iniciarAudio, { once: true });
 });
