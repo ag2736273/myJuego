@@ -6,7 +6,7 @@ function verificarCompletado() {
         setTimeout(() => {
             alert('¡Has completado todos los enigmas de este escenario!');
             window.location.href = './escenario2.html';
-        }, 1000);
+        }, 1);
     }
 }
 
